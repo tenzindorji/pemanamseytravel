@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+  <meta charset="utf-8">
+  <%= render 'layouts/head' %>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'true' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'true' %>
+  <script>new WOW().init();</script>
+
+</head>
+<%= render 'layouts/preloader' %>
+<%= render 'layouts/header' %>
+<body data-spy="scroll">
+<div class="notify-text">
+  <% if notice %>
+      <p class="alert alert-success"><%= notice %> </p>
+  <% end %>
+  <% if alert %>
+      <p class="alert alert-danger"><%= alert %> </p>
+  <% end %>
+</div>
+<%= yield %>
+<div style="position: relative;">
+  <%= render 'layouts/footer' %>
+</div>
+</body>
+</html>

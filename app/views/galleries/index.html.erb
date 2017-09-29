@@ -1,0 +1,52 @@
+<%= content_for(:title, 'Gallery') %>
+
+<div id="testimonials" class="container">
+  <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
+    <span class="bigicon icon-bubbles"></span>
+    <h3>This is what I love to show</h3>
+    <h4></h4>
+    <hr class="separetor">
+  </div>
+
+  <div class="row">
+    <%= link_to new_gallery_path, class: 'pull-right col-md-3 wow bounceIn' do %>
+        <span class="bigicon icon-plus pull-right" style="padding-bottom: 10px;"></span>
+    <% end %>
+  </div>
+  <!-- TESTIMONIAL ITEMS START -->
+  <div class="row">
+    <div id="blueimp-gallery" class="blueimp-gallery">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <!--<ol class="indicator"></ol>-->
+    </div>
+    <div id="links" class="links">
+      <% @documents.each do |document| %>
+          <div class="col-md-4 wow bounceIn" data-wow-duration="2s">
+            <!--<div class="cllientsphoto">-->
+            <a href="<%= document.image.url %>" class="gal img_inner" data-gallery>
+              <%= image_tag document.image.url(:thumb), class: 'img-responsive', alt: "" %>
+            </a>
+            <!--</div>-->
+
+            <div class="quote">
+              <span class="col-md-10">Uploaded <%= time_ago_in_words(document.created_at) %> ago.</span>
+              <div class="col-md-2">
+                <%= link_to gallery_path(document), method: :delete, data: {confirm: "Do you really want to delete this photo?"} do %>
+                    <div class="delete">
+                      <i class="btnicon icon-trash"></i>
+                    </div>
+                <% end %>
+              </div>
+
+            </div>
+          </div><!-- 1ST TESTIMONIAL ITEM END -->
+      <% end %>
+    </div>
+  </div>
+</div><!-- TESTIMONIAL SECTION END -->
+

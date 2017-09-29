@@ -1,0 +1,21 @@
+<%= form_for @gallery do |f| %>
+    <%= render 'layouts/error', object: @gallery %>
+    <div class="form-group">
+      <%= f.label :title, for: 'title' %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Description, for: 'title' %>
+      <%= f.text_area :notes, class: 'form-control', rows: '12' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.fields_for :documents do |g| %>
+          <%= g.file_field :image, accept: 'image/*', label: 'Upload photos' %>
+      <% end %>
+    </div>
+    <div class="form-group file">
+      <%= f.submit :upload, class: 'btn btn-primary' %>
+      <%= link_to :cancel, galleries_path, class: 'btn btn-danger' %>
+    </div>
+<% end %>

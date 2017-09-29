@@ -1,0 +1,131 @@
+<%= content_for(:title, 'About Us') %>
+
+<div class="container margin_top_20">
+  <div class="sectionhead row wow bounceIn">
+    <span class="bigicon icon-cup "></span>
+    <h3>About Us</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <!-- LEFT PART OF THE ABOUT SECTION -->
+  <div id="about" class="col-md-6">
+    <div class="row">
+      <p class="wow bounceIn text-justify" data-wow-duration="3s">BTT travel is one of the latest and advance tour
+        operators in
+        Bhutan. The company was founded by Tenzin and Tshering and was formally established in 2017 when tourism
+        industry in Bhutan is gaining the momentum of popularity. Our collective experiences by studying in other
+        country and living in different parts of the world, we are setting up tourism industry form the goodwill
+        generated from our experiences of having Bhutan a unique nation to visit by many of the travel lovers.
+      </p>
+      <p class="wow bounceIn text-justify" data-wow-duration="3s">Currently, we have a total of 5 permanent staff
+        comprising of an
+        efficient office team, experienced guides and strong social network for trekking. Form humble persona along with
+        our sincere passions, we offer insightful journeys to the customer. Our strong pledge is to have memorial visit
+        in the Kingdom of Bhutan.
+        We will guide you to all that is special about Bhutan, whether it is gazing at beautiful snowcapped mountains,
+        seeing the Kingdom’s colorful festivals or gracious hospitality of the people trough home stay services.
+        We remain with you in creating home away from home- BTT HOME.
+      </p>
+
+      <h3 class="wow bounceIn text-center" data-wow-duration="2s">Mission</h3>
+      <hr class="separetor">
+
+      <p class="wow bounceIn text-justify" data-wow-duration="3s">BTT provide value-added services to the travelers
+        who come to
+        experience our country. We are committed to make home away from home
+      </p>
+
+      <h3 class="wow bounceIn text-center" data-wow-duration="2s">Minimum Daily Package</h3>
+      <h4 class="wow bounceIn text-center" data-wow-duration="3s">The minimum daily package covers the following
+        services.
+      </h4>
+      <hr class="separetor">
+
+      <p class="wow bounceIn text-justify" data-wow-duration="3s">A minimum of 3 star accommodation (4 & 5 star may
+        require an
+        additional premium).
+        All meals
+      </p>
+
+      <p class="wow bounceIn text-justify" data-wow-duration="3s">A licensed Bhutanese tour guide for the extent of
+        your stay
+        All internal transport (excluding internal flights)
+        Camping equipment and haulage for trekking tours
+      </p>
+
+
+      <ul>
+        It also includes:
+        <li>
+          <p class="wow bounceIn" data-wow-duration="3s">
+            All internal taxes and charges
+          </p>
+        </li>
+        <li>
+          <p class="wow bounceIn text-justify" data-wow-duration="3s">
+            A sustainable tourism Royalty of $65. This Royalty goes towards free education, free healthcare, poverty
+            alleviation, along with the building of infrastructure.
+          </p>
+        </li>
+      </ul>
+
+      <p class="wow bounceIn text-justify">
+        The minimum daily package for tourists travelling in a group of 3 persons or more is as follows:
+        USD $200 per person per night for the months of January, February, June, July, August, and December.
+        USD $250 per person per night for the months of March, April, May, September, October, and November.
+      </p>
+
+      <p class="wow bounceIn text-justify">
+        These rates are applicable per tourist per night halt in Bhutan.
+      </p>
+
+      <p class="wow bounceIn text-justify">
+        On the day of departure, the ‘local agents’ host obligation shall be limited to providing breakfast only and any
+        extra requirements shall be payable on usage basis.
+      </p>
+
+      <p class="wow bounceIn text-justify">
+        The list of hotels and lodges approved to provide accommodations all listed on this website. If you
+        accommodation is not listed on this website then it is not licensed cater for international tourists.
+      </p>
+
+      <p class="wow bounceIn text-justify">
+        The Royal Government of Bhutan sets minimum selling prices for packages to Bhutan. These must be paid in US
+        dollars prior to arrival in Bhutan.
+      </p>
+
+      <h3 class="wow bounceIn text-center" data-wow-duration="2s">Money</h3>
+      <h4 class="wow fadeInUp text-center" data-wow-duration="3s">Bhutan’s currency is the Ngultrum (Nu.) It is at par
+        with the
+        Indian rupee which is accepted as legal tender in the country.
+      </h4>
+      <hr class="separetor">
+
+      <p class="wow bounceIn text-justify">
+        Note: INR (Indian Rupees) denominations of 500 and 1000 are not accepted in Bhutan.
+      </p>
+      <p class="wow bounceIn text-justify">
+        ATMs are located within all main towns throughout Bhutan, where money can be withdrawn using a Visa or
+        MasterCard. For concerned travelers a list of ATM locations throughout Bhutan is found
+        <a href="http://www.bob.bt/contact-us/atm-locator/" target="_blank">here</a>
+      </p>
+
+      <p class="wow bounceIn text-justify">
+        In addition, POS (Point of Sale) services are available nationwide, meaning visitors can pay by credit card at
+        most hotels and handicrafts stores.
+      </p>
+
+      <!--<a class="dribbble-follow-button wow bounce" href="http://dribbble.com/srizon">Follow</a>-->
+    </div> <!-- ABOUT INFO END -->
+  </div><!-- LEFT PART OF THE ABOUT SECTION END -->
+  <!--Left part end-->
+
+  <!-- RIGHT PART OF THE ABOUT SECTION -->
+  <% @documents.first(4).each do |document| %>
+      <div class="col-md-6 wow bounceIn myphoto" data-wow-duration="4s">
+        <img class="img-responsive" style="height: 50%; width: 100%;" src="<%= image_url document.image.url %>" alt="<%= document.documentable.title %>">
+      </div><!-- RIGHT PART OF THE ABOUT SECTION END -->
+  <% end %>
+</div><!-- ABOUT SECTION END -->
+
+<hr><!-- SECTION SEPARETOR LINE -->

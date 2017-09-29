@@ -1,0 +1,1066 @@
+<%= content_for(:title, 'Services') %>
+
+<!-- ===========================
+SERVICE SECTION START
+=========================== -->
+<div id="services" class="container">
+  <%= render 'shared/details' %>
+
+  <!-- SERVICE SECTION HEADING START -->
+  <div class="sectionhead wow fadeInUp img-align">
+    <span class="bigicon icon-cup "></span>
+    <h3>Our Services</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <!-- SERVICE ITEMS START -->
+  <div class="row">
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s1.png') %>" alt="">
+      <h4>Cultural Tours</h4>
+      <% string = '<p class="text-justify">Our cultural tours introduce visitors to unique aspects of Mahayana Buddhist culture,
+        including various
+        religious festivals and pilgrimage sites. Whichever tour you select, you will enjoy fascinating excursions to
+        villages, temples and scenic spots for a closer look at a culture and a land which remains the most unspoiled
+        and beautiful example of the traditional Himalayan way of life in existence today.
+      </p>' %>
+      <div class="hidden" id="service-string"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string', 'Cultural Tours')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s2.png') %>" alt="">
+      <h4>Trekking</h4>
+      <% string = '<p class="text-justify">The scope for trekking in Bhutan is immense – from short walks to arduous treks. The very
+        moment you step off
+        the road to start your trek you will be totally de-linked from the stressful sights and sounds of urban life.
+        Instead, you will enjoy views of snowcapped peaks, dense forested hillsides and river valleys, and the sounds of
+        birds and gushing streams. </p>' %>
+      <div class="hidden" id="service-string1"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string1', 'Trekking')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s3.png') %>" alt="">
+      <h4>Special Interest Tours</h4>
+      <% string = '<ol class="text-justify" type="i">
+        <li> • Bird Watching</li>
+        <li> • Alpine Flowers / Botanical Tours</li>
+        <li> • Handicrafts & Textile</li>
+        <li> • Fly Fishing</li>
+        <li> • Kayaking & Rafting</li>
+        <li> • Shamanism /Animist Tours / Eco Tours</li>
+        <li> • Buddhist Teachings & Meditation (Introductory & Refresher)</li>
+      </ol>
+      We also make programs to meet individual needs and preferences.' %>
+      <div class="hidden" id="service-string2"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string2', 'Special Interest Tours')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s4.png') %>" alt="">
+      <h4>Accommodation</h4>
+      <% string = '<p class="text-justify">When you travel with BTT, we arrange your accommodation in lodges, guest houses; smaller
+        hotels and tented camps will be up to the best available. All accommodations used by our customers are certified
+        by the Tourism Council of Bhutan.
+      </p>' %>
+      <div class="hidden" id="service-string3"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string3', 'Accommodation')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s5.png') %>" alt="">
+      <h4>Transportation</h4>
+      <% string = '<p class="text-justify">We have a well net work of transportation arrangements with competent drivers. We also
+        arrange the vehicles based on the special demand.
+      </p>' %>
+      <div class="hidden" id="service-string4"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string4', 'Transportation')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Guides</h4>
+      <% string = '<p class="text-justify">All our tours are escorted by well trained and knowledgeable local guides fluent in
+        English. We will try our
+        best to provide Japanese, German and French speaking guides. All our guides are certified and licensed by the
+        Tourism Council of Bhutan.
+      </p>' %>
+      <div class="hidden" id="service-string5"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string5','Guides')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s4.png') %>" alt="">
+      <h4>Catering</h4>
+      <% string = '<p class="text-justify">Our trained and experienced catering team will accompany you on the treks. All members of
+        our catering team are certified and licensed by the Tourism Council of Bhutan.
+      </p>' %>
+      <div class="hidden" id="service-string6"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string6', 'Catering')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s5.png') %>" alt="">
+      <h4>Visa</h4>
+      <% string = '<h5>With the exception of visitors from India, Bangladesh and Maldives, all other visitors to Bhutan need a
+        visa.</h5>
+      <p class="text-justify">Indian, Bangladeshis and Maldivian nationals can obtain a visa at the port of entry on
+        producing a valid passport with a minimum of 6 month validity (Indian nationals may also use their Voters
+        Identity Card (VIC)). 
+      </p>
+      <p class="text-justify">Visas are required for travelling to Bhutan. No foreign mission/embassy abroad grants
+        tourist visas for Bhutan. Visas are processed through the local tour operator such as BTTin conjunction with the
+        tour booking. 
+      </p>
+      <p> We will apply for your Bhutan visa after the full tour payment is received and will require the following:
+      </p>
+      <ol class="text-justify">
+        <li>Scanned Passport Copy (pg w/pic & details) sent via email. Your photo must be clear.</li>
+        <li>Your passport should be valid for at least 6 month after your planned date of departure from Bhutan.</li>
+      </ol>' %>
+      <div class="hidden" id="service-string7"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string7', 'Visa')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Arrival by Air</h4>
+      <% string = '<ul class="text-justify">
+        <li>• Visa applications are cleared in advance, and a visa clearance doc will be forwarded to you. The visa
+          clearance doc is required for check-in/boarding the flight to Bhutan.
+        </li>
+        <li>• On arrival at the Paro International Airport, the Actual visa is stamped on your passport.</li>
+        <li>• Passport size photo is NOT required for Immigration at Paro Airport but we suggest carrying it.</li>
+      </ul>' %>
+      <div class="hidden" id="service-string8"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string8', 'Arrival by Air')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Other Country Visas</h4>
+      <% string = '<p class="text-justify">
+        Please make sure you have the necessary visas & documents required for other countries that you may transit
+        through or visit before/after Bhutan.
+      </p>' %>
+      <div class="hidden" id="service-string9"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string9', 'Other Country Visas')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Arrival by Land (border towns of Phuntsholing & Samdrup Jongkhar).</h4>
+      <% string = '<ol class="text-justify">
+        <li>• Visa applications are cleared in advance, and a visa clearance doc will be forwarded to you. The visa
+          clearance doc is required at the border Immigration Check Points at Phuntsholing & Samdrup Jongkhar & Gelephu.
+        </li>
+        <li>• On arrival at the border town Immigration Check Points at Phuntsholing & Samdrup Jongkhar & Gelephu, the
+          Actual visa is stamped on your passport.
+        </li>
+        <li>• Passport size photo is NOT required but we suggest carrying it.</li>
+        <li>Finger prints and photos will be taken at the at border town Immigration Check Points at Phuntsholing &
+          Samdrup Jongkhar.
+        </li>
+      </ol>
+      <h4><i>Please make sure to travel with the same passsport on which the Bhutan visa was issued. We will not be held
+        responsible if the passport on which the visa was issued does not match the passport used to travel to Bhutan.
+        In such an event, you will not be allowed to board the flight or enter Bhutan at the border towns.</i></h4>' %>
+      <div class="hidden" id="service-string10"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string10', 'Arrival by Land (border towns of Phuntsholing & Samdrup Jongkhar).')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+  </div>
+
+  <div class="sectionhead  row wow fadeInUp img-align">
+    <span class="bigicon icon-trash"></span>
+    <h3>Tariff</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Inclusive Package Tour & Tariff</h4>
+      <% string = '<p class="text-justify">
+        All tours must be booked through a licensed Bhutanese Tour Operator such as BTT.
+        Visitors may only experience Bhutan on an all-inclusive package tour for which a fixed daily tariff is set by
+        the Royal Government / Tourism Council of Bhutan.
+      </p>' %>
+      <div class="hidden" id="service-string11"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string11', 'Inclusive Package Tour & Tariff')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Minimum Package Tour Rate: (Standard Package)</h4>
+      <% string = '<ul class="text-justify">
+        <li>• US $ 250 per person per night (Mar, Apr, May, Sept, Oct, Nov – Peak Season)</li>
+        <li>• US $ 150 per person per night (Jan, Feb, Jun, Jul, Aug, Dec – Regular Season)</li>
+        <li>• US $ 40 Bhutan Visa fee per person (per one time visit)</li>
+      </ul>' %>
+      <div class="hidden" id="service-string12"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string12', 'Minimum Package Tour Rate: (Standard Package)')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Govt. FIT Surcharge:in addition to the tour rates given above</h4>
+      <% string = '<ul class="text-justify">
+        Single Individual:
+        <li>US $ 40 per night per person (Peak & Regular Season)</li>
+      </ul>
+      <ul class="text-justify">
+        Groups of 2 persons:
+        <li>US $ 30 per night per person (Peak & Regular Season)</li>
+      </ul>
+      <ul class="text-justify">
+        Group of 3 persons and more
+        <li>FIT Surcharge is waived (Peak & Regular Season)</li>
+      </ul>' %>
+      <div class="hidden" id="service-string13"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string13', 'Govt. FIT Surcharge:in addition to the tour rates given above')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>The above Standard Package covers the following land costs:</h4>
+      <% string = '<ol class="text-justify">
+        <li>(a) Govt. approved standard hotels in twin sharing room (2-3 star)</li>
+        <li>(b) All meals at the Govt. approved standard hotels or local restaurants</li>
+        <li>(c) Standard Transport / transfers within Bhutan for the duration of the tour</li>
+        <li>(d) A licensed English speaking local guide for the duration of the tour</li>
+        <li>(e) Sightseeing, entrances fees to museums & monuments, all permits</li>
+        <li>(f) 35% royalty to the government & all taxes</li>
+        <li>(g) Trekking (basic equipments, haulage & crew)</li>
+        Other services, activities and higher category of hotels will require a supplement
+      </ol>' %>
+      <div class="hidden" id="service-string14"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string14', 'The above Standard Package covers the following land costs:')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Accommodation</h4>
+      <% string = '<p class="text-justify">
+        Most hotels in Bhutan are in the 2-3 star level and are referred to as Standard Hotels. A few luxury 4 & 5 star
+        accommodations are also available (Paro, Thimphu, Punakha, Gangtey, Bumthang). The standard accommodations all
+        offer the necessary facilities, and are properly maintained. Generally speaking, hotels in western Bhutan (Paro,
+        Thimphu, Punakha, Wangdue) are better appointed than the rest of the country. Accommodation establishments are
+        more modest with fewer amenities in the more remote areas of central (Gangtey, Trongsa, Bumthang) and eastern
+        Bhutan (Mongar, Trashigang, Trashiyangtse, Samdrup Jongkhar). Sometimes the best accommodation may be the only
+        accommodation and a very modest one in that area especially in the central and eastern regions.
+      </p>' %>
+      <div class="hidden" id="service-string15"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string15', 'Accommodation')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Food</h4>
+      <% string = '<p class="text-justify">
+        The Standard Package tour will include breakfast at the overnight hotel/accommodation; lunch and dinner at local
+        tourist restaurants or at the overnight hotel/accommodation. We provide packed lunch for journeys that pass
+        through areas where local tourist restaurant are not available (central and eastern Bhutan) and on treks and
+        hikes. If weather permits, the packed lunch is normally enjoyed outdoors at a suitable area along the journey.
+        If weather is not suitable, then lunch is provided at the nearest available sheltered structure (house, barn,
+        etc).
+      </p>' %>
+      <div class="hidden" id="service-string16"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string16', 'Food')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Guides</h4>
+      <% string = '<p class="text-justify">
+        All our tours are escorted by well trained and knowledgeable local English Speaking Guides. Our guides are all
+        certified and trained by the Tourism Council of Bhutan. There will be extra charges for German/French/Japanese
+        guides. Since there are not many language speaking guides in Bhutan, advance booking will increase the
+        confirmation of the language speaking guides.
+      </p>' %>
+      <div class="hidden" id="service-string17"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string17', 'Guides')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+  </div>
+
+  <div class="sectionhead  row wow fadeInUp img-align">
+    <span class="bigicon icon-paper-clip "></span>
+    <h3>Accessibility</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Air</h4>
+      <% string = '<p class="text-justify">The only International Airport is located in Paro.
+        International Sectors by Druk Air and Bhutan Airlines:
+        We have also Tashi Air Lines Private</p>
+      <ol class="text-justify">
+        <li>Flight Links</li>
+        <li>India (Kolkata CCU, Delhi DEL, Bagdogra IXB, Guwahati GUA)</li>
+        <li>Nepal (Kathmandu KTM)</li>
+        <li>Thailand (Bangkok BKK)</li>
+        <li>Bangladesh (Dhaka DAC)</li>
+        <li>Singapore (Singapore SIN)</li>
+        <li>National Sectors by Druk Air and Bhutan Airlines:</li>
+        <li>Bathbalathang in Bumthang</li>
+        <li>Yongphul in Trashigang</li>
+      </ol>
+      <h4 class="text-justify">As flights can be delayed due to weather conditions, we advise you to keep at least 24
+        hours transit time
+        between your international flight and Druk Air/Bhutan Airlines flight (incoming and outgoing).</h4>' %>
+      <div class="hidden" id="service-string18"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string18', 'Air')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Land</h4>
+      <% string = '<p class="text-justify">Arrival/departure through the south-western border town of Phuentsholing, south- central
+        border town of Gelephu
+        and the south-eastern border town of Samdrup Jongkhar.
+      </p>
+      <ol class="text-justify">
+        <li>• The nearest airport to the south-western border town of Phuntsholing is at Bagdogra, West Bengal, about 4
+          hours’ drive away. Phuentsholing is a convenient entry/exit point for travellers wishing to visit the Indian
+          states of Sikkim and West Bengal along with Bhutan.
+        </li>
+        <li>• The nearest airport to the south-central border town of Gelephu is at Bagdogra, West Bengal, about 6
+          hours’ drive away. Gelephu can also be used as entry/exit point for travellers wishing to visit the Indian
+          states of Sikkim, West Bengal, Assam and the North Eastern Indian States along with Bhutan.
+        </li>
+        <li>• The nearest airport to the south-eastern border town of Samdrup Jongkhar is at Guwahati, capital of the
+          Indian state of Assam, about 3 hours’ drive away. Samdrup Jongkhar is a convenient entry/exit point for
+          travellers wishing to visit the Indian states of Assam and other North Eastern states of India along with
+          Bhutan.
+        </li>
+      </ol>' %>
+      <div class="hidden" id="service-string19"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string19', 'Land')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Flight Frequency & Airfares</h4>
+      <% string = '<p class="text-justify">Druk Air & Bhutan Airlines flies several times a week between its destinations, but flight
+        timings and
+        frequency vary according to season. Please check our website
+        <a href="http://www.bhutanethometho.com/flightschedule/" target="_blank"> (Click here to view flight schedule)</a> or contact
+      </p>
+      <p class="text-justify">
+        <a href="http://www.bhutanethometho.com/?page_id=867#contact" target="_blank"> (Click here to contact us)</a> for the latest
+        information on flight schedule and airfare when
+        planning your travel
+        arrangements. If you would like the current flight schedule sent to you, please let us know through face book,
+        wechat, WhatsApp and, FaceTime.
+      </p>' %>
+      <div class="hidden" id="service-string20"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string20', 'Flight Frequency & Airfares')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+  </div>
+
+  <!-- SERVICE SECTION HEADING START -->
+  <div class="sectionhead  row wow fadeInUp img-align">
+    <span class="bigicon icon-plane "></span>
+    <h3>Travel Tips</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Language</h4>
+      <% string = '<p class="text-justify">Dzongkha, “the language of the dzong”, belongs to the Tibetan linguistic family.
+        Originally spoken only in
+        western Bhutan, Dzongkha is now Bhutan’s national language. English is commonly spoken in the main towns and
+        is
+        the principal medium of instruction in schools throughout the kingdom.</p>' %>
+      <div class="hidden" id="service-string21"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string21', 'Language')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Time</h4>
+      <% string = '<p class="text-justify">Bhutan time is 6 hours ahead of GMT and there is only one time zone throughout the
+        country.
+      </p>' %>
+      <div class="hidden" id="service-string22"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string22', 'Time')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Health prevention policies</h4>
+      <% string = '<p class="text-justify">No vaccinations are currently required for traveling to Bhutan. Before embarking on a
+        trip
+        to Bhutan, please
+        seek advice from your doctor with regard to vaccinations and appropriate medication you should have prior to
+        your travels. As a minimum you should have tetanus, typhoid and hepatitis A inoculations.
+      </p>' %>
+      <div class="hidden" id="service-string23"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string23', 'Health prevention policies')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Precautions</h4>
+      <% string = '<p class="text-justify">Bhutan is one of the safest countries in the world however you should still exercise
+        caution when visiting. Please ensure that your belongings especially your passports, cameras, wallets and
+        purses
+        are properly secured. Please refrain from leaving such items within sight in locked vehicles while
+        sightseeing.
+      </p>
+      <p class="text-justify">Avoid drinking tap water which has not been boiled or ice cubes in drinks at all times
+        as
+        most water sources in Bhutan are untreated. One can easily acquire affordable treated and bottled water.
+        People
+        prone to car sickness should bring appropriate medicine as the winding roads on the mountains have plenty of
+        curves and turns.
+        Bring any medication you take regularly, or might need to take for a periodically recurring condition, such as
+        asthma.
+      </p>' %>
+      <div class="hidden" id="service-string24"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string24', 'Precautions')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Travel & Medical Insurance</h4>
+      <% string = '<p class="text-justify">We strongly advice travellers to get a comprehensive travel & medical insurance before
+        travelling to Bhutan. If you are coming on a trek, your medical/travel insurance must include provision for
+        evacuation by helicopter and repatriation – should this be necessary.
+      </p>' %>
+      <div class="hidden" id="service-string25"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string25', 'Travel & Medical Insurance')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Climate</h4>
+      <% string = '<p class="text-justify">The southern part of Bhutan is tropical, and in general the eastern region of the
+        country
+        is warmer than the central valleys. However, bear in mind that the higher the altitude, the cooler the
+        weather,
+        and that with a brisk wind blowing down off the mountains, even a low-lying valley can become quite chilly.
+      </p>
+      <p class="text-justify">The central valleys of Punakha, Wangduephodrang, Mongar, Tashigang and Lhuentse enjoy a
+        semi-tropical climate with cool winters, whilst Paro, Thimphu, Tongsa and Bumthang have a much harsher
+        climate,
+        with summer monsoon rains and winter snowfalls which may block passes leading into the central valleys for
+        days
+        at a time. Winter in Bhutan is from mid-November till mid-March, and at this time of the year the climate is
+        dry
+        and sunny for the most part, temperatures peaking at around 15c. in the daytime and falling below zero at
+        night.
+        The monsoon usually arrives in mid-June, with light rain falling mainly in the afternoons and evenings. At the
+        end of September, after the last of the big rains, autumn suddenly arrives, and is a magnificent season for
+        trekking until November. Average Temperature (in Celsius)
+      </p>' %>
+      <div class="hidden" id="service-string26"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string26', 'Climate')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+  </div>
+
+  <!-- SERVICE SECTION HEADING START -->
+  <div class="sectionhead  row wow fadeInUp img-align">
+    <span class="bigicon icon-cloud-download"></span>
+    <h3>Climate</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 wow fadeInUp img-align" style="overflow-x: scroll;">
+      <table class="table-bordered table-responsive table-striped table">
+        <thead>
+        <tr>
+          <th>Places</th>
+          <th>January</th>
+          <th>April</th>
+          <th>July</th>
+          <th>October</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Paro</td>
+          <td>-5.8&#x2103 to 9.4&#x2103</td>
+          <td>4.6&#x2103 to 17.6&#x2103</td>
+          <td>14.9&#x2103 to 26.8&#x2103</td>
+          <td>7.4&#x2103 to 18.7&#x2103</td>
+        </tr>
+        <tr>
+          <td>Thimphu</td>
+          <td>-2.6&#x2103 to 12.3&#x2103</td>
+          <td>7.1&#x2103 to 20.0&#x2103</td>
+          <td>13.4&#x2103 to 28.9&#x2103</td>
+          <td>10.4&#x2103 to 28.9&#x2103</td>
+        </tr>
+        <tr>
+          <td>Punakha</td>
+          <td>4.2&#x2103 to 16.1&#x2103</td>
+          <td>11.9&#x2103 to 24.4&#x2103</td>
+          <td>21.6&#x2103 to 32&#x2103</td>
+          <td>18.9&#x2103 to 27.8&#x2103</td>
+        </tr>
+        <tr>
+          <td>Wangduephodrang</td>
+          <td>4.3&#x2103 to 17.0&#x2103</td>
+          <td>12.9&#x2103 to 26.2&#x2103</td>
+          <td>16.2&#x2103 to 28.4&#x2103</td>
+          <td>14.7&#x2103 to 26.1&#x2103</td>
+        </tr>
+        <tr>
+          <td>Trongsa</td>
+          <td>-0.2&#x2103 to 13.0&#x2103</td>
+          <td>6.6&#x2103 to 20.1&#x2103</td>
+          <td>15.3&#x2103 to 25.3&#x2103</td>
+          <td>11.7&#x2103 to 28.8&#x2103</td>
+        </tr>
+        <tr>
+          <td>Bumthang</td>
+          <td>-5.1&#x2103 to 10.8&#x2103</td>
+          <td>3.9&#x2103 to 87.7&#x2103</td>
+          <td>10.9&#x2103 to 24.1&#x2103</td>
+          <td>5.9&#x2103 to 19.5&#x2103</td>
+        </tr>
+        <tr>
+          <td>Mongar</td>
+          <td>8.2&#x2103 to 15.5&#x2103</td>
+          <td>14.0&#x2103 to 22.8&#x2103</td>
+          <td>15.8&#x2103 to 26.1&#x2103</td>
+          <td>15.8&#x2103 to 22.7&#x2103</td>
+        </tr>
+        <tr>
+          <td>Trashigang</td>
+          <td>10.5&#x2103 to 20.4&#x2103</td>
+          <td>17.0&#x2103 to 28.3&#x2103</td>
+          <td>23.1&#x2103 to 31.5&#x2103</td>
+          <td>17.7&#x2103 to 29.1&#x2103</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br/>
+  <div class="sectionhead  row wow fadeInUp img-align">
+    <span class="bigicon icon-bag"></span>
+    <h3>What to Pack?</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Clothing</h4>
+      <% string = '<p class="text-justify">Due to the wide range of temperature and climatic conditions it is advisable to dress in
+        layers. For protection against cold, layered clothing is better than one or two thick garments. Clothing should
+        preferably be made from natural materials, which allow the body to breathe.
+      </p>' %>
+      <div class="hidden" id="service-string27"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string27', 'Clothing')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Shoes</h4>
+      <% string = '<p class="text-justify">Bring comfortable sport shoes for light hikes & sightseeing; hiking boots for treks; semi
+        formal shoes for dinners/appointments/functions.
+      </p>' %>
+      <div class="hidden" id="service-string28"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string28', 'Shoes')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Trekkers</h4>
+      <% string = '<p class="text-justify">Here are the items which we recommend you to bring along:</p>
+      <ol>
+        <li>• Thermarest and sleeping bags (if you prefer to use your own, we provide used but clean sleeping bags and
+          foam mats)
+        </li>
+        <li>• Mountain trekking shoes (soles with good grip that have already been broken in)</li>
+        <li>• Running/ walking shoes (to use after arriving at camp in the evening)</li>
+        <li>• Sandals or slippers (useful at camp site)</li>
+        <li>• Socks (bring plenty, wool ones dry quicker than cotton)</li>
+        <li>• Light warm jacket and/or fleece / down jacket</li>
+        <li>• T-shirt and inner wear (bring enough as spares)</li>
+        <li>• Rain and wind proof gear – pants/jackets/ponchos/gaiters</li>
+        <li>• Gloves, scarves, other clothing</li>
+        <li>• Water bottle</li>
+        <li>• Cap/hat to prevent sun exposure</li>
+        <li>• Sunglasses, sunscreen, lip protection, sun burn relief cream</li>
+        <li>• Insect repellent</li>
+        <li>• Tooth paste, tooth brush and other sanitary items</li>
+        <li>• Camera with extra charger (no facility to charge battery during trek)</li>
+        <li>• Small sewing kit & safety pins, pocket knife, scissors</li>
+        <li>• Flash light with spare batteries</li>
+        <li>• Your favorite sweets and/or snacks for energy</li>
+        <li>• Your favorite card game</li>
+        <li>• Personal medicines and/or medical kit</li>
+        <li>• Water proof bags/pouches to protect your clothes, electronics and personal items</li>
+        <li>• Backpack & waterproof backpack cover in case of rain</li>
+        <li>• Duffel bags or bags without wheels (easier for ponies to carry) to pack your belongings</li>
+      </ol>' %>
+      <div class="hidden" id="service-string29"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string29', 'Trekkers')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Electricity</h4>
+      <% string = '<p class="text-justify">In Bhutan, electricity runs on 220/240 volts, with round hole two-pin and three-pin power
+        outlets. If you bring electrical appliances, also pack appropriate adapter plugs. In Thimphu electrical
+        appliance shops stock adapter plugs, but they are unlikely to be available elsewhere.
+      </p>' %>
+      <div class="hidden" id="service-string30"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string30', 'Electricity')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Communications</h4>
+      <% string = '<p class="text-justify">You will be able to check your email and make international telephone calls from most
+        towns while touring Bhutan. While Internet cafes are more widespread in the western region, even in the Far East
+        there are public IDD calling booths.
+        Bhutan has a comprehensive mobile (cell) phone network with global roaming also assessable. There are two
+        telecom providers: Bhutan Telecom/B-mobile (national network provider) and Tashi Cell (private network
+        provider). Sim cards are available at the Bhutan Telecom/B-mobile and Tashi Cell outlets and authorized dealers.
+      </p>' %>
+      <div class="hidden" id="service-string31"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string31', 'Communications')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Internet</h4>
+      <% string = '<p class="text-justify">Most hotels in major towns have free wifi services (either in the room, or lobby or both)
+        and in some hotels it maybe chargeable.
+        Data Cards for internet (usb/thumb drives) can also be purchased and can be used where ever there is cellular
+        network (B-mobile or Tashi Cell).
+      </p>
+      <ol>
+        <li>
+          • 3G service is available in all the district and 4G is also available the core area Thimphu, Paro, Wangdue,
+          and Phuntsholing
+        </li>
+      </ol>
+      <h4><i>For more information on communication options visit:</i></h4>
+      <p>
+        B-Mobile/Bhutan Telecom: <a href="http://www.telecom.net.bt/"> http://www.telecom.net.bt/</a> or Tashi Cell
+        <a href="http://www.tashicell.com/">http://www.tashicell.com/</a>
+      </p>' %>
+      <div class="hidden" id="service-string32"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string32', 'Internet')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Accommodation</h4>
+      <% string = '<p class="text-justify">Most hotels in Bhutan are in the 2-3 star level and are referred to as Standard Hotels. A
+        few luxury 4 & 5 star accommodations are also available (Paro, Thimphu, Punakha, Gangtey, Bumthang). The
+        standard accommodations all offer the necessary facilities, and are properly maintained. Generally speaking,
+        hotels in western Bhutan (Paro, Thimphu, Punakha, Wangdue) are better appointed than the rest of the country.
+        Accommodation establishments are more modest with fewer amenities in the more remote areas of central (Gangtey,
+        Trongsa, Bumthang) and eastern Bhutan (Mongar, Trashigang, Trashiyangtse, Samdrup Jongkhar). Sometimes the best
+        accommodation may be the only accommodation and a very modest one in that area especially in the central and
+        eastern regions.
+      </p>' %>
+      <div class="hidden" id="service-string33"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string33', 'Accommodation')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Food</h4>
+      <% string = '<p class="text-justify">Bhutanese delicacies are rich with spicy chilies and cheese. The tourist restaurants will
+        normally tone down the chilly for visitors. Chinese, Continental, Bhutanese and Indian cuisine are available in
+        the hotels and local tourist restaurants.
+        For trekking groups, our trained cooks will prepare dishes suitable to western taste in the above range, and
+        every effort will be made to accommodate the individual dietary preferences of your clients. Please give some
+        advance notice of any special dietary requirements so that we can make appropriate arrangements when the
+        catering team assembles provisions.
+      </p>' %>
+      <div class="hidden" id="service-string34"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string34', 'Food')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Alms giving</h4>
+      <% string = '<p class="text-justify">The giving of alms to mendicants and holy men in the vicinity of markets and outside
+        temples is an accepted practice. In exchange for your contribution of a small coin, a prayer will be intoned for
+        you. Take your cue from the Bhutanese on such occasions and, when in doubt, ask your guide what would be the
+        appropriate thing to do.
+      </p>' %>
+      <div class="hidden" id="service-string35"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string35', 'Alms giving')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Photography</h4>
+      <% string = '<p class="text-justify">The photographic opportunities on all trips are immense. The natural scenery is superb,
+        and you will also wish to record the local people, their houses and shops etc. Always ask by a gesture if it is
+        ok to do so. Don’t take your destination as a living museum! Also, note that photography in shrine rooms of
+        dzongs, monasteries and religious institutions is generally not permitted. Outdoor photography is usually
+        permitted, but when visiting such places, please check with your guide before taking any photographs.
+      </p>' %>
+      <div class="hidden" id="service-string36"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string36', 'Photography')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+  </div>
+
+  <div class="sectionhead  row wow fadeInUp img-align">
+    <span class="bigicon icon-anchor "></span>
+    <h3>ETIQUETTE FOR VISITS TO DZONGS, MONASTERIES, TEMPLES & FESTIVALS</h3>
+    <hr class="separetor">
+  </div><!--SERVICE SECTION HEADING END-->
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Clothing & behavior</h4>
+      <% string = '<p class="text-justify">Dress neatly and modestly and wear full sleeved collared shirts (covered arms, no shorts
+        or short skirts) and remove hats, caps, sunglasses before entering the precincts of Dzongs or religious
+        complexes. Do not smoke. Walk clockwise around Chortens (stupas) and Mani (prayer) walls. If you see a prayer
+        flagpole on the ground waiting to be erected, do not step over it, as this is considered extremely
+        disrespectful, walk around it instead.
+      </p>' %>
+      <div class="hidden" id="service-string37"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string37', 'Clothing & behavior')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Photography</h4>
+      <% string = '<p class="text-justify">Photography is usually permitted in public areas, such as courtyards and dance grounds,
+        but not permitted inside the chapels of religious complexes. Check first with your guide to avoid in advertently
+        giving offence, and at all times take care not to intrude upon the social space of others when taking
+        photographs. NEVER stray onto the dance ground at a festival in search of the perfect shot – this is the height
+        of bad manners and will definitely give offence to all Bhutanese who see you!
+      </p>' %>
+      <div class="hidden" id="service-string38"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string38', 'Photography')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Shopping</h4>
+      <% string = '<p class="text-justify">Hand-woven textiles, carved masks, woven baskets, wooden bowls, handmade paper products,
+        finely crafted metal objects, Thangkha paintings and Bhutan’s exquisite postage stamps are the items mostly
+        purchased by travelers in Bhutan. Thimphu & Paro has the most extensive range of the handicraft items. It is
+        recommended to carry cash such as Euro, Pounds, US dollars, Japanese Yen and related travelers’ checks for
+        expenses in Bhutan. Credit cards are new to Bhutan and only few shops may accept it.
+        The buying and selling of antiques is strictly forbidden. Be cautious when considering the purchase of old and
+        used items, especially of religious or cultural significance, as such items may not be exported without a
+        clearance certificate. It is best to buy more expensive items at reputable shops, which provide receipts as
+        proof of purchase.
+      </p>' %>
+      <div class="hidden" id="service-string39"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string39', 'Shopping')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Tipping</h4>
+      <% string = '<p class="text-justify">Hotel and restaurant bills include service charges amounting to 5-10%. There is no need to
+        add anything further on this. BTT will take care of this.
+      </p>' %>
+      <div class="hidden" id="service-string40"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string40', 'Tipping')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Gratuities</h4>
+      <% string = '<p class="text-justify">Tipping of your guide, driver and trek crew (on treks) is a purely personal matter. The
+        bottom line in determining whether or how much to tip is to ask yourself how much BTT team members did to make
+        your Bhutan travel experience more enjoyable.
+      </p>' %>
+      <div class="hidden" id="service-string41"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string41', 'Gratuities')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+
+    <div class="col-md-6 col-lg-4 wow fadeInUp img-align" data-wow-duration="3s">
+      <img src="<%= image_url('s6.png') %>" alt="">
+      <h4>Customs</h4>
+      <% string = '<ul type="circle">
+        <li>• Visitors are required to complete a passenger declaration form for checking by concerned officers on
+          arrival. The following articles are exempt from duty
+          <ol>
+            <li>(a) Personal articles for day to day use by the visitor</li>
+            <li>(b) Instruments, apparatus or appliances for professional use</li>
+            <li>(c) Photographic equipment, video cameras and other electronic goods for personal use</li>
+          </ol>
+        </li>
+        <h4><i>The articles mentioned under (b) & (c) must be declared on the declaration form. If any such items are
+          disposed of in Bhutan by sale or gift, they are liable for customs duty. On departure, visitors are required
+          to surrender their forms to the Customs authorities.
+        </i>
+        </h4>
+        <li>
+          • Import/export restrictions of the following goods is strictly prohibited
+          <ol type="i">
+            <li>(a) Arms, ammunitions and explosives</li>
+            <li>(b) All narcotics and drugs except medically prescribed drugs</li>
+            <li>(c) Wildlife products, especially those of endangered species</li>
+            <li>(d) Antiques</li>
+          </ol>
+        </li>
+        <h4>
+          <i>
+            Imports of plants, soils etc. are subject to quarantine regulations. These items must be cleared on arrival.
+            Visitors are advised to be cautious in purchasing old and used items, especially of religious or cultural
+            significance, as such items may not be exported without a clearance certificate. Etho Metho’s advice should
+            be sought before committing to such purchases.
+          </i>
+        </h4>
+        <li>
+          • Sale of Tobacco products is banned in Bhutan. Import of Tobacco products for personal consumption requires
+          payment of import duty. Kindly bring you own Tobacco products and declare at the Customs counter at the
+          airport in Paro or if traveling by road at the Immigration/Customs check points in Samdrup Jongkar/
+          Phuntsholing/Gelephu. You will have to carry with you the Customs Receipt (proof of import duty payment) at
+          all times as you may be asked to show the Customs Receipt by the local authorities if seen smoking in public
+          areas.
+        </li>
+        <li>
+          • The permitted amount is 300 sticks of cigarette or 150 grams of tobacco products or 50 pieces of cigars. You
+          will be charged a 150% import duty.
+        </li>
+      </ul>' %>
+      <div class="hidden" id="service-string42"><%= string.html_safe %></div>
+      <div class="service-content">
+        <%= truncate(strip_tags(string), length: 150) %>
+        <% if string.length > 150 %>
+            <a class="read-more" onclick="showModal('#service-string42', 'Customs')"><%= t('readmore') %></a>
+        <% end %>
+      </div>
+    </div> <!-- ITEM END -->
+  </div>
+</div><!-- SERVICE SECTION END -->
+
+<script>
+    $(function () {
+        $('.read-more').css('cursor', 'pointer');
+    });
+    function showModal(id, title) {
+        res = $(id).html();
+        $('.modal-value').html(res);
+        $('#myModalLabel').html(title);
+        $('#my-modal').modal();
+    }
+</script>

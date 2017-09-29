@@ -1,0 +1,16 @@
+<% if object.errors.any? %>
+    <% sentence = I18n.t("errors.messages.not_saved",
+                         count: object.errors.count,
+                         resource: object.class.model_name.human.downcase) %>
+    <div class="panel panel-warning error">
+      <div class="panel-heading">
+        <h5><i class="btnicon icon-user"></i> <%= sentence %></h5>
+      </div>
+
+      <ul class="panel-body">
+        <% object.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

@@ -1,0 +1,57 @@
+<%= content_for(:title, 'Home') %>
+
+<!-- ===========================
+FEATURED CLIENTS SECTION START
+=========================== -->
+<div id="clients">
+  <div id="testimonials" class="container">
+    <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
+      <span class="bigicon icon-bubbles"></span>
+      <h3>Hello Hello Hello (Greetings)
+      </h3>
+      <h4 class="text-info text-justify">The success of life has to stain and spatter in the world of right place.
+        Bhutan became for
+        such destiny and
+        we Bhutan TT Travel (Bhutan Tenzin Tshering Travel) magnify your dream visit with loyalty and accountability.
+        With great enthusiastic and mode of providing memorial visit we have placed best possible arrangements for our
+        customers. Everyone who is with us is the positive and true contributors in making our business growing better
+        with values for future cause.
+      </h4>
+      <h4>Tashi Delek!</h4>
+      <hr class="separetor">
+    </div><!-- TESTIMONIAL SECTIONHEAD END -->
+
+    <!-- TESTIMONIAL ITEMS START -->
+    <div class="row">
+      <!-- 1ST TESTIMONIAL ITEM -->
+      <% @documents.each_with_index do |document, index| %>
+          <div class="col-md-6 wow bounceIn shadow" data-wow-duration="2s">
+            <div class="quote">
+              <div class="clientsphoto">
+                <img class="img-responsive" src="<%= document.image.url(:thumb) %>" alt="<%= document.documentable.title %>">
+              </div>
+              <p class="text-justify">
+                <%= truncate(document.documentable.notes, length: 380) %>
+                <% if document.documentable.notes.length > 380 %>
+                    <a class="read-more" onclick="showModal('<%=document.documentable.notes%>', '<%=document.documentable.title%>')"><%= t('readmore') %></a>
+                <% end %>
+              </p>
+              <b>Posted <%= time_ago_in_words(document.created_at) %> ago.</b>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+</div>
+<%= render 'shared/details' %>
+<script>
+    $(function () {
+        $('.read-more').css('cursor', 'pointer');
+    });
+    function showModal(notes, title) {
+        $('.modal-value').html("<div class='text-justify'>" + notes + "</div>");
+        $('#myModalLabel').html(title);
+        $('#my-modal').modal();
+    }
+</script>
